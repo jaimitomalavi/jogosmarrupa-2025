@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulário de Login</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                background-color: #e9ecef;
+            }
+            .login-box {
+                background-color: #fff;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+                width: 300px;
+                text-align: center;
+            }
+            .login-box h2 {
+                margin-bottom: 20px;
+                color: #333;
+            }
+            .login-box input {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-sizing: border-box;
+            }
+            .login-box button {
+                width: 100%;
+                padding: 10px;
+                background-color: #28a745;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+            .login-box button:hover {
+                background-color: #218838;
+            }
+            .error {
+                color: red;
+                font-size: 14px;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <!--img src="JogosMrp/src/main/webapp/foto.jpg" alt="foto pessoal"-->
+        <!--img src="picture/foto.jpg" alt="foto pessoal"-->
+        <div class="login-box">
+            <h2>Login</h2>
+            <form action="Login" method="post">
+                <input type="text" name="username" placeholder="Nome de utilizador" required>
+                <input type="password" name="password" placeholder="Senha" required>
+                <button type="submit">Entrar</button>
+                <p style="color: red;">${mensagemErro}</p>
+            </form>
+        </div>
+    </body>
+</html>
